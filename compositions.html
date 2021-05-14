@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compositions</title>
+    <link rel="stylesheet" href="css/compositions_style.css">
+</head>
+
+<body>
+ 
+    <div>
+        <header>
+            <img src="images/school_logo2.jpg" alt="school_logo" id="headerlogo">
+            <h2>Giannopoulos College</h2>
+        </header>
+
+        <nav>       <!--menu-->
+            <ul>
+                <li><a href="index.html" id="first">Home</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="cousres.html">Courses</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="trainer.html">Trainer</a></li>
+                <li><a href="compositions.html">Compositions</a></li>
+            </ul>
+        </nav>
+
+        <div id="mainHeader"> <!--Ενημέρωση για required-->
+            <p>All fields are required per form *</p>
+        </div>
+
+        <main>
+
+            <div>
+
+                <form name="form1">
+
+                    <h3>Course - Trainer</h3>
+                    <select required>
+                        <option value="">Select Trainer*</option>
+                        <option value="Trainer1">Trainer1</option>
+                        <option value="Trainer2">Trainer2</option>
+                        <option value="Trainer3">Trainer3</option>                        
+                    </select>
+                    <br/>
+                    <span class="msgError" id="error-trainerCourse1"></span>
+                    <br/>
+                    <select required>
+                        <option value="">Select Course*</option>
+                        <option value="Course1#">Course1</option>
+                        <option value="Course2#">Course2</option> 
+                        <option value="Course3#">Course3</option> 
+                    </select>
+                    <br/>
+                    <span class="msgError" id="error-trainerCourse2"></span>
+                    <br/>
+
+                </form>
+
+                <button class="compositionButton" onclick="validateForm1()">Submit</button>
+                <input class="compositionButton" type="reset" value="Reset">
+                    
+            </div>
+
+            <div>
+
+                <form name="form2">
+
+                    <h3>Student - Course</h3>
+                    <select required>
+                        <option value="">Select Student*</option>
+                        <option value="Student1">Student1</option>
+                        <option value="Student2">Student2</option>
+                        <option value="Student3">Student3</option>
+                    </select><br/>
+                    <span class="msgError" id="error-studentCourse1"></span>
+                    <br/>
+                    <select required>
+                        <option value="">Select Course*</option>
+                        <option value="Course1#">Course1</option>
+                        <option value="Course2#">Course2</option> 
+                        <option value="Course3#">Course3</option>
+                    </select><br/>
+                    <span class="msgError" id="error-studentCourse2"></span>
+                    <br/>
+                                        
+                </form>
+
+                <button class="compositionButton" onclick="validateForm2()">Submit</button>
+                <input class="compositionButton" type="reset" value="Reset">
+
+            </div>
+
+            <div>
+
+                <form name="form3">
+
+                    <h3>Assignment - Course</h3>
+                    <select required>
+                        <option value="">Select Assignment*</option>
+                        <option value="Assignment1">Assignment1</option>
+                        <option value="Assignment2">Assignment2</option>
+                        <option value="Assignment3">Assignment3</option>                                    
+                    </select><br/>
+                    <span class="msgError" id="error-assignmentCourse1"></span>
+                    <br/>
+                    <select required>
+                        <option value="">Select Course*</option>
+                        <option value="Course1#">Course1</option>
+                        <option value="Course2#">Course2</option> 
+                        <option value="Course3#">Course3</option>
+                    </select><br/>
+                    <span class="msgError" id="error-assignmenttCourse2"></span>
+                    <br/>
+
+                </form>
+                
+                <button class="compositionButton" onclick="validateForm3()">Submit</button>
+                <input class="compositionButton" type="reset" value="Reset">
+
+            </div>
+
+            <div>
+
+                <form name="form4">
+
+                    <h3>Assignment - Student - Course</h3>
+                    <select required>
+                        <option value="">Select Assignment*</option>
+                        <option value="Assignment1">Assignment1</option>
+                        <option value="Assignment2">Assignment2</option>
+                        <option value="Assignment3">Assignment3</option>                                   
+                    </select><br/>
+                    <span class="msgError" id="error-assignmentstudenttcourse1"></span>
+                    <br/>
+                    <select required>
+                        <option value="">Select Student*</option>
+                        <option value="Student1">Student1</option>
+                        <option value="Student2">Student2</option>
+                        <option value="Student3">Student3</option>
+                    </select><br/>
+                    <span class="msgError" id="error-assignmentstudenttcourse2"></span>
+                    <br/>
+                    <select required>
+                        <option value="">Select Course*</option>
+                        <option value="Course1#">Course1</option>
+                        <option value="Course2#">Course2</option> 
+                        <option value="Course3#">Course3</option>
+                    </select><br/>
+                    <span class="msgError" id="error-assignmentstudenttcourse3"></span>
+                    <br/>
+
+                </form>
+
+                <button class="compositionButton" onclick="validateForm4()">Submit</button>
+                <input class="compositionButton" type="reset" value="Reset">
+
+            </div>
+
+        </main>
+
+        <footer>
+
+            <table>
+                <tr>
+                    <td><img src="images/tech_support.png" alt="address_logo"></td>
+                    <td>technical-support@giannopoulos-college.gr</td>
+                    <td><img src="images/phone_logo.png" alt="phone_logo"></td>
+                    <td>Τεχνική Υποστήριξη: 1888</td>
+                </tr>
+            </table>
+
+        </footer>
+
+    </div>
+
+    <script src="js/compositions_app.js"></script>
+
+</body>
+</html>

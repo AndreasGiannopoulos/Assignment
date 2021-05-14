@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers</title>
+    <link rel="stylesheet" href="css/trainers_style.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+            <img src="images/school_logo2.jpg" alt="school_logo" id="headerlogo">
+            <h2>Giannopoulos College</h2>
+        </header>
+
+        <nav>       <!--menu-->
+            <ul>
+                <li><a href="index.html" id="first">Home</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="cousres.html">Courses</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="trainer.html">Trainer</a></li>
+                <li><a href="compositions.html">Compositions</a></li>
+            </ul>
+        </nav>
+        
+        <main>                  <!--θα μπουν οι φόρμες για εγγραφή νέου καθηγητή και αλλαγή στοιχείων καθηγητή -->
+
+            <div>               <!--Φόρμα εγγραφής νέου καθηγητή-->
+
+                <table>
+
+                    <form name="form1">
+
+                        <tr>
+                            <th colspan="2">Add New Trainer<br/><span>Fields with * are required</span></th>
+                        </tr>
+                        <tr>        
+                            <td class="trainerLeft"><label for="trainerSubject">Subject of Expertise*:</label></td>
+                            <td>
+                                <select name="courseType" id="trainerSubject" required>
+                                    <option value=""></option>
+                                    <option value="Science">Science</option>
+                                    <option value="ΦιλολLiteraryογικά">Literary</option>
+                                    <option value="Foreign Languages">Foreign Languages</option>
+                                    <option value="Artistically">Artistically</option>
+                                    <option value="Sports">Sports</option>    
+                                </select>
+                                <br/>
+                                <span class="msgError" id="error-trainerSubject"></span>
+                            </td>
+                        </tr>
+                        <tr>        <!--trainer first name-->
+                            <td class="trainerLeft"><label for="trainerFirstName">Trainer's First Name*:</label></td>
+                            <td>
+                                <input type="text" name="trainerFirstName" id="trainerFirstName" required>
+                                <br/>
+                                <span class="msgError" id="error-trainerFirstName"></span>
+                            </td>
+                        </tr>
+                        <tr>        <!--trainer last name-->
+                            <td class="trainerLeft"><label for="trainerLastName">Trainer's Last Name*:</label></td>
+                            <td>
+                                <input type="text" name="trainerLastName" id="trainerLastName" required>
+                                <br/>
+                                <span class="msgError" id="error-trainerLastName"></span>
+                            </td>
+                        </tr>
+                        
+                    </form>
+
+                    <tr>
+                        <td class="trainerLeft"><button class="trainerButton" onclick="validateForm1()">Submit</button></td>
+                        <td><input type="reset" value="Reset" class="trainerButton" id="trainerReset"></td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div>            <!--Φόρμα αλλαγής στοιχείων καθηγητή-->
+
+                <table>
+
+                    <form name="form2">
+
+                        <tr>
+                            <th colspan="2">Edit Trainer's Data</th>
+                        </tr>
+                        <tr>
+                            <td class="trainerLeft">Select Trainer</td>
+                            <td>
+                                <select id="chSelectTrainer">
+                                    <option value=""></option>
+                                    <option value="Καθηγητής1">Trainer1</option>
+                                    <option value="Καθηγητής2">Trainer2</option>
+                                    <option value="Καθηγητής3">Trainer3</option>
+                                    <option value="Καθηγητής4">Trainer4</option>
+                                    <option value="Καθηγητής5">Trainer5</option>
+                                </select>
+                                <br/>
+                                <span class="msgError" id="error-chSelectTrainer"></span>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td class="trainerLeft"><label for="chTrainerFirstName">New Trainer's First Name:</label></td>
+                            <td>
+                                <input type="text" name="chTrainerFirstName" id="chTrainerFirstName" >
+                                <br/>
+                                <span class="msgError" id="error-chTrainerFirstName"></span>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td class="trainerLeft"><label for="chTrainerLastName">New Trainer's Last Name:</label></td>
+                            <td>
+                                <input type="text" name="chTrainerLastName" id="chTrainerLastName">
+                                <br/>
+                                <span class="msgError" id="error-chTrainerLastName"></span>
+                            </td>
+                        </tr>
+
+                    </form>
+
+                    <tr>
+                        <th colspan="2"><button class="trainerButton" id="trainerSubmit" onclick="validateForm2()">Update</button></th>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+            <table>
+                <tr>
+                    <td><img src="images/tech_support.png" alt="address_logo"></td>
+                    <td>technical-support@giannopoulos-college.gr</td>
+                    <td><img src="images/phone_logo.png" alt="phone_logo"></td>
+                    <td>Τεχνική Υποστήριξη: 1888</td>
+                </tr>
+            </table>
+
+        </footer>
+
+    </div>
+
+    <script src="js/trainer_app.js"></script>
+    
+</body>
+</html>

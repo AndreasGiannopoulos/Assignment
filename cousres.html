@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="css/courses_style.css">
+</head>
+
+<body>
+
+    <div>
+        
+        <header>
+            <img src="images/school_logo2.jpg" alt="school_logo" id="headerlogo">
+            <h2>Giannopoulos College</h2>
+        </header>
+
+        <nav>       <!--menu-->
+            <ul>
+                <li><a href="index.html" id="first">Home</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="cousres.html">Courses</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="trainer.html">Trainer</a></li>
+                <li><a href="compositions.html">Compositions</a></li>
+            </ul>
+        </nav>
+        
+        <main>                  <!--θα μπουν οι φόρμες για εγγραφή νέου μαθηήματος και αλλαγή στοιχείων μαθήματος -->
+
+            <div>               <!--Φόρμα εγγραφής νέου μαθήματος-->
+
+                <table>
+                
+                    <form name="form1">
+                    
+                        <tr>
+                            <th colspan="2">Add New Course</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">New Course Data<br/><span>Fields with * are required</span></th>
+                        </tr>
+                        <tr>        <!--Course Title-->
+                            <td class="courseLeft"><label for="courseTitle">Course Title*:</label></td>
+                            <td>
+                                <input type="text" name="courseTitle" id="courseTitle" required>
+                                <br/>
+                                <span class="msgError" id="error-courseTitle"></span>
+                            </td>
+                        </tr>
+                        <tr>        <!--Class-->
+                            <td class="courseLeft"><label for="selectClass">Course Stream*:</label></td>
+                            <td>
+                                <select id="selectClass" required>
+                                    <option value=""></option>
+                                    <option value="C#">C#</option>
+                                    <option value="Java">Java</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                    <option value="3rd Primary School">Python</option>                                
+                                </select>
+                                <br/>
+                                <span class="msgError" id="error-selectClass"></span>
+                            </td>
+                        </tr>
+                        <tr>        <!--Course Type-->
+                            <td class="courseLeft"><label for="courseType">Course Type*:</label></td>
+                            <td>
+                                <select name="courseType" id="courseType" required>
+                                    <option value=""></option>
+                                    <option value="Part Time">Part Time</option>
+                                    <option value="Full Time">Full Time</option>   
+                                </select>
+                                <br/>
+                                <span class="msgError" id="error-courseType"></span>
+                            </td>
+                        </tr>
+                        <tr>                <!--Start date-->
+                            <td class="courseLeft"><label for="courseStartDate">Course Starting Date*:</label></td>
+                            <td>
+                                <input type="date" name="courseStartDate" id="courseStartDate">
+                                <br/>
+                                <span class="msgError" id="error-courseStartDate"></span>
+                            </td>
+                        </tr>
+                        <tr>                <!--End date-->
+                            <td class="courseLeft"><label for="courseEndDate">Course End Date*:</label></td>
+                            <td>
+                                <input type="date" name="courseEndDate" id="courseEndDate">
+                                <br/>
+                                <span class="msgError" id="error-courseEndDate"></span>
+                            </td>
+                        </tr>
+
+                    </form>
+
+                    <tr>
+                        <td class="courseLeft"><button class="courseButton" onclick="validateForm1()">Submit</button></td>
+                        <td><input type="reset" value="Reset" class="courseButton" id="courseReset"></td>
+                    </tr>                        
+                    
+                
+                
+                </table>
+
+            </div>
+
+            <div>            <!--Φόρμα αλλαγής στοιχείων μαθήματος-->
+
+                <table>
+
+
+                <form name="form2">
+
+                    <tr>
+                        <th colspan="2">Edit Course Data</th>
+                    </tr>
+                    <tr>
+                        <td class="courseLeft">Select Course</td>
+                        <td>
+                            <select id="chSelectCourse">
+                                <option value=""></option>
+                                <option value="Course1#">Course1</option>                                    
+                                <option value="Course2#">Course2</option> 
+                                <option value="Course3#">Course3</option>                                  
+                            </select>
+                            <br/>
+                            <span class="msgError" id="error-chSelectCourse"></span>
+                        </td>
+                    </tr>
+                    <tr>        <!--Course Title-->
+                        <td class="courseLeft"><label for="chCourseTitle">New Course Title:</label></td>
+                        <td><input type="text" name="chCourseTitle" id="chCourseTitle" ></td>
+                    </tr>
+                    <tr>        <!--Class-->
+                        <td class="courseLeft"><label for="chSelectClass">New Course Stream:</label></td>
+                        <td>
+                            <select id="chSelectClass">
+                                <option value=""></option>
+                                <option value="C#">C#</option>
+                                <option value="Java">Java</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="3rd Primary School">Python</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>        <!--Course Type-->
+                        <td class="courseLeft"><label for="chCourseType">New Course Type:</label></td>
+                        <td>
+                            <select name="month" id="chCourseType">
+                                <option value=""></option>
+                                <option value="Part Time">Part Time</option>
+                                <option value="Full Time">Full Time</option>    
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>                <!--Start date-->
+                        <td class="courseLeft"><label for="chCourseStartDate">New Course Starting Date:</label></td>
+                        <td>
+                            <input type="date" name="chCourseStartDate" id="chCourseStartDate">
+                            <br/>
+                            <span class="msgError" id="error-chCourseStartDate"></span>
+                        </td>
+                    </tr>
+                    <tr>                <!--End date-->
+                        <td class="courseLeft"><label for="chCourseEndDate">New Course End Date:</label></td>
+                        <td>
+                            <input type="date" name="chCourseEndDate" id="chCourseEndDate">
+                            <br/>
+                            <span class="msgError" id="error-chCourseEndDate"></span>
+                        </td>
+                    </tr>
+
+                </form>
+                
+                <tr>
+                    <th colspan="2"><button class="courseButton" id="courseSubmit" onclick="validateForm2()">Upadate</button></th>
+                </tr>                
+
+            </table>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+            <table>
+                <tr>
+                    <td><img src="images/tech_support.png" alt="address_logo"></td>
+                    <td>technical-support@giannopoulos-college.gr</td>
+                    <td><img src="images/phone_logo.png" alt="phone_logo"></td>
+                    <td>Τεχνική Υποστήριξη: 1888</td>
+                </tr>
+            </table>
+
+        </footer>
+
+    </div>
+
+    <script src="js/courses_app.js"></script>
+    
+</body>
+</html>

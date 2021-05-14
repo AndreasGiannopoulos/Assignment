@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="css/assignments_style.css">
+</head>
+
+<body>
+
+    <div>
+        
+        <header>
+            <img src="images/school_logo2.jpg" alt="school_logo" id="headerlogo">
+            <h2>Giannopoulos College</h2>
+        </header>
+
+        <nav>       <!--menu-->
+            <ul>
+                <li><a href="index.html" id="first">Home</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="cousres.html">Courses</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="trainer.html">Trainer</a></li>
+                <li><a href="compositions.html">Compositions</a></li>
+            </ul>
+        </nav>
+        
+        <main>                  <!--θα μπουν οι φόρμες για εγγραφή νέας εργασίας και αλλαγή στοιχείων εργασίας -->
+
+            <div>   <!--Φόρμα εγγραφής νέας εργασίας-->
+
+                <table>
+
+                    <form name="form1">
+
+                        <tr>
+                            <th colspan="2">Add New Assignment</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Enter Assignment's data<br/><span>Fields with * are required</span></th>
+                        </tr>
+                        <tr>        
+                            <td class="assignmentLeft"><label for="assignmentTitle">Assignment's Title*:</label></td>
+                            <td>
+                                <input type="text" name="assignmentTitle" id="assignmentTitle" required>
+                                <br/>
+                                <span class="msgError" id="error-assignmentTitle"></span>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td class="assignmentLeft"><label for="assignmentDescription">Assignment's Description:</label></td>
+                            <td><textarea name="sxolia" rows="10" placeholder="Περιγραφή" id="assignmentDescription" ></textarea></td>
+                        </tr>
+                        <tr>                
+                            <td class="assignmentLeft"><label for="subDateTime">Assignment's Deadline*:</label></td>
+                            <td>
+                                <input type="date" name="subDateTime" id="subDateTime" required>
+                                <br/>
+                                <span class="msgError" id="error-subDateTime"></span>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td class="assignmentLeft"><label for="oralMark">Oral Mark*:</label></td>
+                            <td>
+                                <input type="number" name="oralMark" id="oralMark">                                
+                                <br/>
+                                <span class="msgError" id="error-oralMark"></span>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td class="assignmentLeft"><label for="totalMark">Final Mark*:</label></td>
+                            <td>
+                                <input type="number" name="totalMark" id="totalMark" required> 
+                                <br/>
+                                <span class="msgError" id="error-totalMark"></span>
+                            </td>
+                        </tr>
+                    
+                    </form>
+
+                        <tr> 
+                            <td class="assignmentLeft"><button class="assignmentButton" onclick="validateForm1()">Submit</button></td>
+                            <td><input type="reset" value="Reset" class="assignmentButton" id="assignmentReset"></td>
+                        </tr>
+
+                </table>
+
+            </div>
+
+            <div>            <!--Φόρμα αλλαγής στοιχείων εργασίας-->
+
+                <table>
+
+                    <form name="form2">
+
+                        <tr>
+                            <th colspan="2">Edit Assignment's data</th>
+                        </tr>
+                        <tr>
+                            <td class="assignmentLeft">Select Assignment</td>
+                            <td>
+                                <select >
+                                    <option value=""></option>
+                                    <option value="Εργασία1">Assignment1</option>
+                                    <option value="Εργασία2">Assignment2</option>
+                                    <option value="Εργασία3">Assignment3</option>
+                                    <option value="Εργασία4">Assignment4</option>
+                                    <option value="Εργασία5">Assignment5</option>                                    
+                                </select>
+                                <br/>
+                                <span class="msgError" id="error-selectAssignment"></span>
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td class="assignmentLeft"><label for="chAssignmentTitle">Assignment's Title Change:</label></td>
+                            <td><input type="text" name="chAssignmentTitle" id="chAssignmentTitle" ></td>
+                        </tr>
+                        <tr>        
+                            <td class="assignmentLeft"><label for="chAssignmentDescription"> New Assignment's Description:</label></td>
+                            <td><textarea name="sxolia" rows="10" placeholder="Περιγραφή" id="chAssignmentDescription" ></textarea></td>
+                        </tr>
+                        <tr>                
+                            <td class="assignmentLeft"><label for="chSubDateTime">New Assignment's Deadline:</label></td>
+                            <td><input type="date" name="chSubDateTime" id="chSubDateTime" ></td>
+                        </tr>
+                        <tr>        
+                            <td class="assignmentLeft"><label for="chOralMark">New Oral Mark:</label></td>
+                            <td><input type="number" name="chOralMark" id="chOralMark"></td>
+                        </tr>
+                        <tr>        
+                            <td class="assignmentLeft"><label for="chTotalMark">New Final Mark:</label></td>
+                            <td><input type="number" name="chTotalMark" id="chTotalMark"></td>
+                        </tr>
+
+                    </form>
+
+                    <tr>
+                        <th colspan="2"><button class="assignmentButton" id="assignmentSubmit" onclick="validateForm2()">Update</button></th>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </main>
+        
+        <footer>
+
+            <table>
+                <tr>
+                    <td><img src="images/tech_support.png" alt="address_logo"></td>
+                    <td>technical-support@giannopoulos-college.gr</td>
+                    <td><img src="images/phone_logo.png" alt="phone_logo"></td>
+                    <td>Τεχνική Υποστήριξη: 1888</td>
+                </tr>
+            </table>
+
+        </footer>
+
+    </div>
+    
+    <script src="js/assignments_app.js"></script>
+
+</body>
+</html>
