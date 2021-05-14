@@ -5,6 +5,7 @@ function validateForm1() {
     let date = document.forms["form1"][3].value;
     let year = document.forms["form1"][4].value;
     let fees = document.forms["form1"][5].value;
+    let course = document.forms["form1"][6].value;
     let errorMsg = "";
 
     if (name === "") {                                              /*Name validate */
@@ -59,7 +60,15 @@ function validateForm1() {
         document.getElementById("error-fees").innerHTML = errorMsg;
     }
 
-    return false
+    if (course ==="") {                                           
+        errorMsg = "* Required Field!";
+        document.getElementById("error-course").innerHTML = errorMsg;
+    }
+    else {
+        errorMsg = "";
+        document.getElementById("error-course").innerHTML = errorMsg;
+    }
+
 }
 
 /*Στη 2η φόρμα δεν βάζω υποχρεωτικά όλα τα πεδία, ώστε να μπορεί ο χρήστης να αλλάξει μόνο τα πεδία τα οποία διαφέρουν.*/

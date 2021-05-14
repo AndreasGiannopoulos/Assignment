@@ -1,9 +1,10 @@
 function validateForm1() {
     let title = document.forms["form1"][0].value;
-    let classLVL = document.forms["form1"][1].value;
+    let stream = document.forms["form1"][1].value;
     let type = document.forms["form1"][2].value;
     let courseStartDate = document.forms["form1"][3].value;
     let courseEndDate = document.forms["form1"][4].value;
+    let courseTrainer = document.forms["form1"][5].value;
     let errorMsg = "";
 
     if (title === "") {                                              /*Course Title validate */
@@ -19,7 +20,7 @@ function validateForm1() {
         document.getElementById("error-courseTitle").innerHTML = errorMsg;
     }
 
-    if (classLVL ==="") {                                           /*Class validate */
+    if (stream ==="") {                                           /*Class validate */
         errorMsg = "* Required Field!";
         document.getElementById("error-selectClass").innerHTML = errorMsg;
     }
@@ -66,7 +67,14 @@ function validateForm1() {
         document.getElementById("error-courseEndDate").innerHTML = errorMsg;
     }
 
-
+    if (courseTrainer ==="") {                                           
+        errorMsg = "* Required Field!";
+        document.getElementById("error-courseTrainer").innerHTML = errorMsg;
+    }
+    else {
+        errorMsg = "";
+        document.getElementById("error-courseTrainer").innerHTML = errorMsg;
+    }
 }
 
 /*Στη 2η φόρμα δεν βάζω υποχρεωτικά όλα τα πεδία, ώστε να μπορεί ο χρήστης να αλλάξει μόνο τα πεδία τα οποία διαφέρουν.*/

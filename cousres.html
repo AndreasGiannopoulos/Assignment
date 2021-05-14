@@ -92,6 +92,19 @@
                                 <span class="msgError" id="error-courseEndDate"></span>
                             </td>
                         </tr>
+                        <tr>        <!--Trainer-->
+                            <td class="courseLeft"><label for="courseTrainer">Course Trainer*:</label></td>
+                            <td>
+                                <select name="courseTrainer" id="courseTrainer" required>
+                                    <option value=""></option>
+                                    <option value="Trainer1">Trainer1</option>
+                                    <option value="Trainer2">Trainer2</option>
+                                    <option value="Trainer3">Trainer3</option>    
+                                </select>
+                                <br/>
+                                <span class="msgError" id="error-courseTrainer"></span>
+                            </td>
+                        </tr>
 
                     </form>
 
@@ -169,6 +182,19 @@
                             <input type="date" name="chCourseEndDate" id="chCourseEndDate">
                             <br/>
                             <span class="msgError" id="error-chCourseEndDate"></span>
+                        </td>
+                    </tr>
+                    <tr>        <!--Trainer-->
+                        <td class="courseLeft"><label for="chCourseTrainer">Course Trainer:</label></td>
+                        <td>
+                            <select name="chCourseTrainer" id="chCourseTrainer">
+                                <option value=""></option>
+                                <option value="Trainer1">Trainer1</option>
+                                <option value="Trainer2">Trainer2</option>
+                                <option value="Trainer3">Trainer3</option>    
+                            </select>
+                            <br/>
+                            <span class="msgError" id="error-chCourseTrainer"></span>
                         </td>
                     </tr>
 

@@ -220,14 +220,26 @@
                                 <span class="msgError" id="error-fees"></span>
                             </td>
                         </tr>
+                        <tr>
+                            <td class="studentLeft"><label for="course">Course*:</label></td>
+                            <td>
+                                <select name="course">
+                                    <option value=""></option>
+                                    <option value="Course1#">Course1</option>
+                                    <option value="Course2#">Course2</option> 
+                                    <option value="Course3#">Course3</option> 
+                                </select>
+                                <br/>
+                                <span class="msgError" id="error-course"></span>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td class="studentLeft"><button value="Αποθήκευση" class="studentButton" onclick="validateForm1()">Submit</button></td>
+                            <td><input type="reset" value="Reset" class="studentButton" id="studentReset"></td>
+                        </tr>
 
                     </form>
-
-                    <tr> 
-                        <td class="studentLeft"><button value="Αποθήκευση" class="studentButton" onclick="validateForm1()">Submit</button></td>
-                        <td><input type="reset" value="Reset" class="studentButton" id="studentReset"></td>
-                    </tr>
-
+                    
                 </table>
                 
                 
@@ -433,12 +445,24 @@
                                 <span class="msgError" id="error-chfees"></span>
                             </td>
                         </tr>
+                        <tr>
+                            <td class="studentLeft"><label for="chCourse">New Course:</label></td>
+                            <td>
+                                <select name="chCourse">
+                                    <option value=""></option>
+                                    <option value="Course1#">Course1</option>
+                                    <option value="Course2#">Course2</option> 
+                                    <option value="Course3#">Course3</option> 
+                                </select>
+                                <br/>
+                                <span class="msgError" id="error-chCourse"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><button onclick="validateForm2()" class="studentButton" id="studentSubmit">Update</button></th>
+                        </tr>
                     
-                    </form>
-
-                    <tr>
-                        <th colspan="2"><button onclick="validateForm2()" class="studentButton" id="studentSubmit">Update</button></th>
-                    </tr>                    
+                    </form>                                    
 
                 </table>
 

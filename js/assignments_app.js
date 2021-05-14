@@ -3,6 +3,7 @@ function validateForm1() {
     let date = document.forms["form1"][2].value;
     let oralMark = document.forms["form1"][3].value;
     let totalMark = document.forms["form1"][4].value;
+    let course = document.forms["form1"][4].value;
     let errorMsg = "";
 
     if (title === "") {                                              /*Assignment Title validate */
@@ -44,8 +45,15 @@ function validateForm1() {
         errorMsg = "";
         document.getElementById("error-totalMark").innerHTML = errorMsg;
     }
-
     
+    if (course ==="") {                                           
+        errorMsg = "* Required Field!";
+        document.getElementById("error-course").innerHTML = errorMsg;
+    }
+    else {
+        errorMsg = "";
+        document.getElementById("error-course").innerHTML = errorMsg;
+    }
 }
 
 /*Στη 2η φόρμα δεν βάζω υποχρεωτικά όλα τα πεδία, ώστε να μπορεί ο χρήστης να αλλάξει μόνο τα πεδία τα οποία διαφέρουν.*/
