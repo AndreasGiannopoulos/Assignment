@@ -45,7 +45,7 @@
                         <tr>        
                             <td class="assignmentLeft"><label for="assignmentTitle">Assignment's Title*:</label></td>
                             <td>
-                                <input type="text" name="assignmentTitle" id="assignmentTitle" required>
+                                <input type="text" name="assignmentTitle" id="assignmentTitle" >
                                 <br/>
                                 <span class="msgError" id="error-assignmentTitle"></span>
                             </td>
@@ -73,7 +73,7 @@
                         <tr>        
                             <td class="assignmentLeft"><label for="totalMark">Final Mark*:</label></td>
                             <td>
-                                <input type="number" name="totalMark" id="totalMark" required> 
+                                <input type="number" name="totalMark" id="totalMark" > 
                                 <br/>
                                 <span class="msgError" id="error-totalMark"></span>
                             </td>
@@ -91,8 +91,8 @@
                                 <span class="msgError" id="error-course"></span>
                             </td>
                         </tr>
-                        <tr> 
-                            <td class="assignmentLeft"><button class="assignmentButton" onclick="validateForm1()">Submit</button></td>
+                        <tr>
+                            <td class="assignmentLeft"><input type="submit" value="Submit" class="assignmentButton" onclick="validateForm1()"></td>
                             <td><input type="reset" value="Reset" class="assignmentButton" id="assignmentReset"></td>
                         </tr>
                     
