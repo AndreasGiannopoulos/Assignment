@@ -4,7 +4,7 @@ function validateForm1() {
     let lastName = document.forms["form1"][2].value;
     let errorMsg = "";
 
-    if (courseType === "") {                                              /*Course Type validate */
+    if (courseType === "") {
         errorMsg = "* Required Field!";
         document.getElementById("error-trainerSubject").innerHTML = errorMsg;
     }
@@ -13,7 +13,7 @@ function validateForm1() {
         document.getElementById("error-trainerSubject").innerHTML = errorMsg;
     }
 
-    if (firstName ==="") {                                           /*Firstname validate */
+    if (firstName ==="") {
         errorMsg = "* Required Field!";
         document.getElementById("error-trainerFirstName").innerHTML = errorMsg;
     }
@@ -26,7 +26,7 @@ function validateForm1() {
         document.getElementById("error-trainerFirstName").innerHTML = errorMsg;
     }
 
-    if (lastName ==="") {                                           /*Lastname validate */
+    if (lastName ==="") {
         errorMsg = "* Required Field!";
         document.getElementById("error-trainerLastName").innerHTML = errorMsg;
     }
@@ -41,7 +41,6 @@ function validateForm1() {
 
 }
 
-/*Στη 2η φόρμα δεν βάζω υποχρεωτικά όλα τα πεδία, ώστε να μπορεί ο χρήστης να αλλάξει μόνο τα πεδία τα οποία διαφέρουν.*/
 
 function validateForm2() {
     let selectTrainer = document.forms["form2"][0].value;
@@ -49,7 +48,7 @@ function validateForm2() {
     let chTrainerLastName = document.forms["form2"][2].value;
     let errorMsg2 = "";
 
-    if (selectTrainer === "") {              /*Εφόσον πατήσει Αποθήκευση πρέπει να έχει επιλεγεί ο μαθητής που θα γίνουν οι αλλαγές */
+    if (selectTrainer === "") {
         errorMsg2 = "* Required Field!";
         document.getElementById("error-chSelectTrainer").innerHTML = errorMsg;
     }

@@ -6,7 +6,7 @@ function validateForm1() {
     let course = document.forms["form1"][4].value;
     let errorMsg = "";
 
-    if (title === "") {                                              /*Assignment Title validate */
+    if (title === "") { 
         errorMsg = "* Required Field!!";
         document.getElementById("error-assignmentTitle").innerHTML = errorMsg;
     }
@@ -20,7 +20,7 @@ function validateForm1() {
     }
 
     
-    if (oralMark === "") {                                 /*Oral Mark validate */
+    if (oralMark === "") {
         errorMsg = "* Required Field!";
         document.getElementById("error-oralMark").innerHTML = errorMsg;
     }
@@ -33,7 +33,7 @@ function validateForm1() {
         document.getElementById("error-oralMark").innerHTML = errorMsg;
     }
 
-    if (totalMark === "") {                                 /*Oral Mark validate */
+    if (totalMark === "") {
         errorMsg = "* Required Field!";
         document.getElementById("error-totalMark").innerHTML = errorMsg;
     }
@@ -56,7 +56,7 @@ function validateForm1() {
     }
 }
 
-/*Στη 2η φόρμα δεν βάζω υποχρεωτικά όλα τα πεδία, ώστε να μπορεί ο χρήστης να αλλάξει μόνο τα πεδία τα οποία διαφέρουν.*/
+
 
 function validateForm2() {
     let selectAssignment = document.forms["form2"][0].value;
@@ -64,7 +64,7 @@ function validateForm2() {
     let chTotalMark = document.forms["form2"][5].value;   
     let errorMsg2 = "";
 
-    if (selectAssignment === "") {                                              /*Assignment Title validate */
+    if (selectAssignment === "") {   
         errorMsg2 = "* Required Field!";
         document.getElementById("error-selectAssignment").innerHTML = errorMsg;
         return false

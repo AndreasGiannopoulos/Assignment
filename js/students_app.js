@@ -8,7 +8,7 @@ function validateForm1() {
     let course = document.forms["form1"][6].value;
     let errorMsg = "";
 
-    if (name === "") {                                              /*Name validate */
+    if (name === "") {
         errorMsg = "* Required Field!";
         document.getElementById("error-name").innerHTML = errorMsg;
     }
@@ -21,7 +21,7 @@ function validateForm1() {
         document.getElementById("error-name").innerHTML = errorMsg;
     }
 
-    if (lastName ==="") {                                           /*Lastname validate */
+    if (lastName ==="") {
         errorMsg = "* Required Field!";
         document.getElementById("error-lastName").innerHTML = errorMsg;
     }
@@ -34,11 +34,11 @@ function validateForm1() {
         document.getElementById("error-lastName").innerHTML = errorMsg;
     }
 
-    if ( month === "" || date === "" || year === "") {              /*Birthday validate */
+    if ( month === "" || date === "" || year === "") {
         errorMsg = "* All Three Are Required Field!";
         document.getElementById("error-date").innerHTML = errorMsg;
     }
-    else if (year < 2002 || year >= 2020) {                         /*Ηληκία για μαθητές σχολίου   2 ετων(νηπιαγωγείο) <ηληκία μαθητή < 19 ετών */
+    else if (year < 2002 || year >= 2020) {
         errorMsg = "* Enter Correct Year Of Birth";
         document.getElementById("error-date").innerHTML = errorMsg;
     }    
@@ -47,7 +47,7 @@ function validateForm1() {
         document.getElementById("error-date").innerHTML = errorMsg;
     }
 
-    if (fees < 500 || fees >5000) {                                 /*Fees validate */
+    if (fees < 500 || fees >5000) {
         errorMsg = "* Enter Correct Fees";
         document.getElementById("error-fees").innerHTML = errorMsg;
     }
@@ -71,7 +71,6 @@ function validateForm1() {
 
 }
 
-/*Στη 2η φόρμα δεν βάζω υποχρεωτικά όλα τα πεδία, ώστε να μπορεί ο χρήστης να αλλάξει μόνο τα πεδία τα οποία διαφέρουν.*/
 
 function validateForm2() {
     let chStudent = document.forms["form2"][0].value;
@@ -83,7 +82,7 @@ function validateForm2() {
     let chFees = document.forms["form2"][6].value;
     let errorMsg2 = "";
 
-    if (chStudent === "") {     /*Εφόσον πατήσει Αποθήκευση πρέπει να έχει επιλεγεί ο μαθητής που θα γίνουν οι αλλαγές */
+    if (chStudent === "") {
         errorMsg2 = "* Select Student";
         document.getElementById("error-chStudent").innerHTML = errorMsg2;
     }    

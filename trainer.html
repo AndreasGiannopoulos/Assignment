@@ -24,7 +24,6 @@
                 <li><a href="cousres.html">Courses</a></li>
                 <li><a href="students.html">Students</a></li>
                 <li><a href="trainer.html">Trainer</a></li>
-                <li><a href="compositions.html">Compositions</a></li>
             </ul>
         </nav>
         
@@ -42,14 +41,17 @@
                         <tr>        
                             <td class="trainerLeft"><label for="trainerSubject">Subject of Expertise*:</label></td>
                             <td>
-                                <select name="courseType" id="trainerSubject" required>
+                                <label><input class="checkbox" type="checkbox"> C#</label><br/>
+                                <label><input class="checkbox" type="checkbox"> Java</label><br/>
+                                <label><input class="checkbox" type="checkbox"> JavaScript</label><br/>                                
+                                <label><input class="checkbox" type="checkbox"> Python</label>
+                                <!-- <select name="courseType" id="trainerSubject" required>
                                     <option value=""></option>
-                                    <option value="Science">Science</option>
-                                    <option value="ΦιλολLiteraryογικά">Literary</option>
-                                    <option value="Foreign Languages">Foreign Languages</option>
-                                    <option value="Artistically">Artistically</option>
-                                    <option value="Sports">Sports</option>    
-                                </select>
+                                    <option value="C#">C#</option>
+                                    <option value="Java">Java</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                    <option value="3rd Primary School">Python</option>   
+                                </select> -->
                                 <br/>
                                 <span class="msgError" id="error-trainerSubject"></span>
                             </td>
@@ -70,13 +72,12 @@
                                 <span class="msgError" id="error-trainerLastName"></span>
                             </td>
                         </tr>
+                        <tr>
+                            <td class="trainerLeft"><input type="submit" value="Submit" class="trainerButton" onclick="validateForm1()"></td>
+                            <td><input type="reset" value="Reset" class="trainerButton" id="trainerReset"></td>
+                        </tr>
                         
-                    </form>
-
-                    <tr>
-                        <td class="trainerLeft"><button class="trainerButton" onclick="validateForm1()">Submit</button></td>
-                        <td><input type="reset" value="Reset" class="trainerButton" id="trainerReset"></td>
-                    </tr>
+                    </form>                    
 
                 </table>
 
@@ -107,7 +108,7 @@
                             </td>
                         </tr>
                         <tr>        
-                            <td class="trainerLeft"><label for="chTrainerFirstName">New Trainer's First Name:</label></td>
+                            <td class="trainerLeft"><label for="chTrainerFirstName">Change Trainer's First Name:</label></td>
                             <td>
                                 <input type="text" name="chTrainerFirstName" id="chTrainerFirstName" >
                                 <br/>
@@ -115,7 +116,7 @@
                             </td>
                         </tr>
                         <tr>        
-                            <td class="trainerLeft"><label for="chTrainerLastName">New Trainer's Last Name:</label></td>
+                            <td class="trainerLeft"><label for="chTrainerLastName">Change Trainer's Last Name:</label></td>
                             <td>
                                 <input type="text" name="chTrainerLastName" id="chTrainerLastName">
                                 <br/>
